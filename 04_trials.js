@@ -14,8 +14,7 @@ const trial_info = {
            key2: 'f',
            j: 'same',
            f: 'different',
-           correct: 'different',
-           incorrect: 'same',
+           expected: 'different',
            degree_of_rotation: '50',
            picture_number: '1'
       },
@@ -26,8 +25,7 @@ const trial_info = {
            key2: 'f',
            j: 'same',
            f: 'different',
-           correct: 'same',
-           incorrect: 'different',
+           expected: 'same',
            degree_of_rotation: '50',
            picture_number: '2'
       },
@@ -38,8 +36,7 @@ const trial_info = {
            key2: 'f',
            j: 'same',
            f: 'different',
-           correct: 'different',
-           incorrect: 'same',
+           expected: 'different',
            degree_of_rotation: '150',
            picture_number: '3'
       },
@@ -50,8 +47,7 @@ const trial_info = {
            key2: 'f',
            j: 'same',
            f: 'different',
-           correct: 'different',
-           incorrect: 'same',
+           expected: 'different',
            degree_of_rotation: '150',
            picture_number: '4'
       },
@@ -62,8 +58,7 @@ const trial_info = {
            key2: 'f',
            j: 'same',
            f: 'different',
-           correct: 'different',
-           incorrect: 'same',
+           expected: 'different',
            degree_of_rotation: '50',
            picture_number: '5'
       }

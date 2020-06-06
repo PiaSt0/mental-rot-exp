@@ -101,7 +101,7 @@ const thanks = magpieViews.view_generator("thanks", {
 * https://magpie-ea.github.io/magpie-docs/01_designing_experiments/01_template_views/#trial-views
 */
 
-const key_press_mental_rot = magpieViews.view_generator({
+const key_press_mental_rot = magpieViews.view_generator('key_press',{
   trials: trial_info.key_press.length,
   name: 'key_press_mental_rot',
   data: _.shuffle(trial_info.key_press)
