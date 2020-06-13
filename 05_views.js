@@ -23,29 +23,59 @@ const intro = magpieViews.view_generator("intro", {
   trials: 1,
   name: 'intro',
   // If you use JavaScripts Template String `I am a Template String`, you can use HTML <></> and javascript ${} inside
-  text: `This is a sample introduction view.
-            <br />
-            <br />
-            The introduction view welcomes the participant and gives general information
-            about the experiment. You are in the <strong>${coin}</strong> group.
-            <br />
-            <br />
-            This is a minimal experiment with one forced choice view. It can serve as a starting point for programming your own experiment.`,
-  buttonText: 'begin the experiment'
+  text: `Thank you for participating in this experiment!`,
+  buttonText: 'Begin the experiment'
 });
 
 // For most tasks, you need instructions views
-const instructions = magpieViews.view_generator("instructions", {
+const instructions_1 = magpieViews.view_generator("instructions", {
   trials: 1,
-  name: 'instructions',
-  title: 'General Instructions',
-  text: `This is a sample instructions view.
+  name: 'instructions_1',
+  buttonText: 'Start practice trials',
+  text: `This experiment comprises simple key press tasks.
             <br />
             <br />
-            Tell your participants what they are to do here.`,
-  buttonText: 'go to trials'
+            For each task, you will be presented with a picture showing
+            two either different or identical 3-dimensional objects.
+            If you think that the objects are the same (except for their orientation),
+            press "j".
+            If you think they are different, press "k".
+            <br />
+            <br />
+            Please try to decide as accurate and as fast as possible.
+            <br />
+            <br />
+            Before the experiment starts, you will have a some instances of the
+            task for practice, where you will additionally receive feedback
+            about the correctness of your answer (i.e. the key you pressed).
+            You will be informed, when the main experiment starts.
+            <br />
+            <br />
+            Click on the button below to proceed to the practice trials.`,
+  title: 'General Instructions'
 });
 
+const instructions_2 = magpieViews.view_generator("instructions", {
+  trials: 1,
+  name: 'instructions_2',
+  buttonText: 'Begin experiment',
+  text: `Great, you have finished all practice trials.
+            <br />
+            <br />
+            The following part will be the main experiment,
+            <br />
+            your task and the instructions stay the same.
+            <br />
+            However, you will not be displayed any feedback about the
+            <br />
+            correctness of your answer anymore.
+            <br />
+            <br />
+            Again: Please try to answer as fast and accurate as possible.
+            <br />
+            You can now continue the experiment by pressing the button below.`,
+    title: 'Practice finished -> Begin',
+}),
 
 // In the post test questionnaire you can ask your participants addtional questions
 const post_test = magpieViews.view_generator("post_test", {
@@ -101,10 +131,31 @@ const thanks = magpieViews.view_generator("thanks", {
 * https://magpie-ea.github.io/magpie-docs/01_designing_experiments/01_template_views/#trial-views
 */
 
-const key_press_mental_rot = magpieViews.view_generator('key_press',{
-  trials: trial_info.key_press.length,
-  name: 'key_press_mental_rot',
-  data: _.shuffle(trial_info.key_press)
+// Here, we initialize a keyPress task
+const key_press_practice = custom_views.keypress_rotation_practice({
+    trials: 12,
+    // trials: 12,
+    name: 'key_press_practice',
+    trial_type: 'practice',
+    pause: 250,
+    data: _.shuffle(practice_trials.key_press),
+    key1: "f",
+    key2: "j",
+    f: "same",
+    j: "different",
+});
+
+const key_press_main = custom_views.keypress_rotation_main({
+    trials: 48,
+    // trials: 48,
+    name: 'key_press_main',
+    trial_type: 'main',
+    pause: 250,
+    data: _.shuffle(main_trials.key_press),
+    key1: "f",
+    key2: "j",
+    f: "same",
+    j: "different",
 });
 
 // There are many more templates available:
