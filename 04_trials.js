@@ -1,9 +1,9 @@
 // In this file you can specify the trial data for your experiment
 
-const practice_trials = {
 
+const practice_trials = {
     key_press: [
-      {
+        {
             picture: "images/practice/13_50_same.jpg",
             item: 13,
             expected: "same",

@@ -14,6 +14,7 @@ const coin = _.sample(["head", "tail"]); // You can determine global (random) pa
 *
 */
 
+
 /* For generating random participant IDs */
     // https://stackoverflow.com/questions/1349404/generate-random-string-characters-in-javascript
 // dec2hex :: Integer -> String
@@ -30,7 +31,7 @@ const generateID = function(len) {
 
 
 
-/* Hooks
+/* Hooks  
 *
 *
 */

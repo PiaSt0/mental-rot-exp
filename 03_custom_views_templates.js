@@ -1,14 +1,5 @@
 // In this file you can create your own custom view templates
 
-
-// A view template is a function that returns a view,
-// this functions gets some config (e.g. trial_data, name, etc.) information as input
-// A view is an object, that has a name, CT (the counter of how many times this view occurred in the experiment),
-// trials the maximum number of times this view is repeated
-// and a render function, the render function gets CT and the magpie-object as input
-// and has to call magpie.findNextView() eventually to proceed to the next view (or the next trial in this view),
-// if it is an trial view it also makes sense to call magpie.trial_data.push(trial_data) to save the trial information
-
 // First we create a custom_views object
 const custom_views = {};
 
@@ -124,7 +115,7 @@ custom_views.keypress_rotation_practice = function(config) {
             magpieUtils.view.createTrialDOM(
                 {
                     pause: config.pause,
-                    fix_duration: config.fix_duration,
+                    //fix_duration: config.fix_duration,
                     stim_duration: config.stim_duration,
                     data: config.data[CT],
                     evts: config.hook,
@@ -248,7 +239,7 @@ custom_views.keypress_rotation_main = function(config) {
             magpieUtils.view.createTrialDOM(
                 {
                     pause: config.pause,
-                    fix_duration: config.fix_duration,
+                    //fix_duration: config.fix_duration,
                     stim_duration: config.stim_duration,
                     data: config.data[CT],
                     evts: config.hook,
