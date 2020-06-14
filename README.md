@@ -13,10 +13,10 @@ Participants view 48 pairs of images of 3D shapes and respond (forced binary cho
 
 ## \_magpie
 
-This experiment was built using [\_magpie](https://magpie-ea.github.io/magpie-site/index.html). 
+This experiment was built using [\_magpie](https://magpie-ea.github.io/magpie-site/index.html).
 
 ## Running the experiment
 
-1. Online Link: 
+1. Online Link: https://mental-rotation-experiment-xp-lab-2020.netlify.app/
 
 2. Offline: Clone the repository, run `npm install` and open `index.html`.
