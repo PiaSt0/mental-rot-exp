@@ -25,13 +25,15 @@ $("document").ready(function() {
         ],
         // Here, you can specify all information for the deployment
         deploy: {
-            experimentID: "INSERT_A_NUMBER",
+            // must contain the ID the _magpie server app provided for your experiment when created it online
+            experimentID: "113",
+            // the URL (possibly local) to your server app instance which handles the data
             serverAppURL: "https://magpie-demo.herokuapp.com/api/submit_experiment/",
             // Possible deployment methods are:
             // "debug" and "directLink"
             // As well as "MTurk", "MTurkSandbox" and "Prolific"
-            deployMethod: "debug",
-            contact_email: "YOUREMAIL@wherelifeisgreat.you",
+            deployMethod: "directLink",
+            contact_email: "pstermann@uni-osnabrueck.de",
             prolificURL: "https://app.prolific.ac/submissions/complete?cc=SAMPLE1234"
         },
         // Here, you can specify how the progress bar should look like
