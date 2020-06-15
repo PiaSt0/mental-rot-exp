@@ -31,7 +31,7 @@ const generateID = function(len) {
 
 
 
-/* Hooks  
+/* Hooks
 *
 *
 */
@@ -42,10 +42,10 @@ const time_limit = function(data, next) {
         window.timeout = [];
     }
     // Add timeouts to the timeoutarray
-    // Reminds the participant to respond after 5 seconds
+    // Reminds the participant to respond after 7.5 seconds
     window.timeout.push(setTimeout(function(){
           $('#reminder').text('Please answer more quickly!');
-    }, 5000));
+    }, 7500));
     next();
 };
 
